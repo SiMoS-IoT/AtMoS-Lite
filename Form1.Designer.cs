@@ -37,8 +37,14 @@ namespace AtMoS_Lite
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblDataFileLocation = new System.Windows.Forms.Label();
+            this.lblSystemTime = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -107,11 +113,64 @@ namespace AtMoS_Lite
             this.toolStripStatusLabel1.Text = "AtMoS-Lite - Copyright 2022 SiMoS-IoT";
             this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lblSystemTime);
+            this.groupBox1.Controls.Add(this.lblDataFileLocation);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 36);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(479, 148);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Experiment details";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "System time: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 61);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Datafile location:";
+            // 
+            // lblDataFileLocation
+            // 
+            this.lblDataFileLocation.AutoSize = true;
+            this.lblDataFileLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataFileLocation.Location = new System.Drawing.Point(6, 86);
+            this.lblDataFileLocation.Name = "lblDataFileLocation";
+            this.lblDataFileLocation.Size = new System.Drawing.Size(97, 13);
+            this.lblDataFileLocation.TabIndex = 2;
+            this.lblDataFileLocation.Text = "lblDataFileLocation";
+            // 
+            // lblSystemTime
+            // 
+            this.lblSystemTime.AutoSize = true;
+            this.lblSystemTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSystemTime.Location = new System.Drawing.Point(119, 35);
+            this.lblSystemTime.Name = "lblSystemTime";
+            this.lblSystemTime.Size = new System.Drawing.Size(74, 13);
+            this.lblSystemTime.TabIndex = 3;
+            this.lblSystemTime.Text = "lblSystemTime";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 418);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -122,6 +181,8 @@ namespace AtMoS_Lite
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,6 +198,11 @@ namespace AtMoS_Lite
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblSystemTime;
+        private System.Windows.Forms.Label lblDataFileLocation;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 
