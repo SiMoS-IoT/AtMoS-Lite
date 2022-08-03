@@ -16,5 +16,12 @@ namespace AtMoS_Lite
         {
             InitializeComponent();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+            Environment.Exit(0);
+            this.Close();
+        }
     }
 }
