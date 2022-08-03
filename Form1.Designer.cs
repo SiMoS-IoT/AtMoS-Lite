@@ -42,6 +42,9 @@ namespace AtMoS_Lite
             this.label2 = new System.Windows.Forms.Label();
             this.lblDataFileLocation = new System.Windows.Forms.Label();
             this.lblSystemTime = new System.Windows.Forms.Label();
+            this.lblExpDesc = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -98,7 +101,7 @@ namespace AtMoS_Lite
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 396);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 509);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(503, 22);
             this.statusStrip1.TabIndex = 1;
@@ -115,6 +118,8 @@ namespace AtMoS_Lite
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.lblExpDesc);
             this.groupBox1.Controls.Add(this.lblSystemTime);
             this.groupBox1.Controls.Add(this.lblDataFileLocation);
             this.groupBox1.Controls.Add(this.label2);
@@ -122,10 +127,11 @@ namespace AtMoS_Lite
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 36);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(479, 148);
+            this.groupBox1.Size = new System.Drawing.Size(479, 226);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Experiment details";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label1
             // 
@@ -165,11 +171,42 @@ namespace AtMoS_Lite
             this.lblSystemTime.TabIndex = 3;
             this.lblSystemTime.Text = "lblSystemTime";
             // 
+            // lblExpDesc
+            // 
+            this.lblExpDesc.AutoSize = true;
+            this.lblExpDesc.Location = new System.Drawing.Point(6, 127);
+            this.lblExpDesc.Name = "lblExpDesc";
+            this.lblExpDesc.Size = new System.Drawing.Size(151, 13);
+            this.lblExpDesc.TabIndex = 4;
+            this.lblExpDesc.Text = "Description of experiment";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(9, 152);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(464, 61);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 282);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(479, 212);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Experiment parameters";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 418);
+            this.ClientSize = new System.Drawing.Size(503, 531);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -177,6 +214,7 @@ namespace AtMoS_Lite
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AtMoS-Lite";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -203,6 +241,9 @@ namespace AtMoS_Lite
         private System.Windows.Forms.Label lblDataFileLocation;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblExpDesc;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
